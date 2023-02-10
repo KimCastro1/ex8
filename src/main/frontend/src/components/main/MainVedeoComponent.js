@@ -6,7 +6,7 @@ export default class MainVedeoComponent extends Component {
       <>
       <div className='main_video'>
         <div className='main_video_wrraper'>
-              <iframe  id="my_iframe" width="1080" height="500" src="https://www.youtube.com/embed/cGNUpsevAk4" frameborder="0"></iframe>
+              <iframe  id="my_iframe" width="1080" height="500" src="https://www.youtube.com/embed/cGNUpsevAk4" frameBorder="0"></iframe>
             <div className='main_video_info'> 
                 더 베스트 슬렘덩크
               <div className='viedeo_info'> 

@@ -1,4 +1,5 @@
 import {React,useState} from 'react'
+import { Link } from 'react-router-dom'
 import img from '../../img/testimg.jpg'
 
 
@@ -6,26 +7,26 @@ const MainMoviewItemComponent=()=>{
 
     const [state, setState] = useState(true)
 
-    const mouseIn = event => {
+    const mouseIn = () => {
         setState(current => !current)
     }
 
     return(
             <>
-                <div className='list_item_1'>
+                <div className='list_item_1' onMouseOver={mouseIn} onMouseOut={mouseIn}>
                     <div className='list_item_1_wrrap'>
                         <img className="list_item_1_src" src={img}></img>
                     </div>
-                    <div className='list_item_1_wrrap_h' onMouseOver={mouseIn()}>
-                        <i>&nbsp;1</i>
-                    </div>
-                    <div className='button_group' style={{display:state?'block':'none'}}>
-                        <div className='custom_btn btn1'>
+                    <div className={`${state?"show":""} button_group`}>
+                        <Link to='/movie/1'><div className='custom_btn btn1'>
                             상세보기
-                        </div>
-                        <div className='custom_btn btn2'>
+                        </div></Link>
+                        <Link to='/reservation/1'><div className='custom_btn btn2'>
                             예매하기
-                        </div>
+                        </div></Link>
+                    </div>
+                    <div className={`list_item_1_wrrap_h ${state?"":"hovering_ef"}`}>
+                        <i>&nbsp;1</i>
                     </div>
                     <div className='title'>
                         더 퍼스트 슬램덩크

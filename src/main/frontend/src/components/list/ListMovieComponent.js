@@ -11,7 +11,7 @@ export default class ListMovieComponent extends Component {
               <div className='submenu'>
                 <ul>
                   <li className='selected_list_option'><b>▶ 무비차트</b></li>
-                  <Link to = ''><li className='list_option'>상영예정작</li></Link>
+                  <Link to = '/commingsoon'><li className='list_option'>▶ 상영예정작</li></Link>
                 </ul>
               </div>
             </div>

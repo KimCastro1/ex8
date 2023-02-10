@@ -76,6 +76,12 @@ li {
     padding: 40px 5px 20px 5px;
     background-color: #fff;
 }
+.contents1{
+    width: 980px;
+    margin:0 auto;
+    padding: 40px 5px 20px 5px;
+    background-color: #fff;
+}
 .contents h1 span {
     font-weight: 300;
     font-size: 16px;
@@ -200,13 +206,19 @@ li {
     padding-top: 30px;
     width:1080px;
 }
+.justify_s{
+    justify-content: flex-start;
+}
+.dis_f{
+    display: flex;
+}
 .list_item{
     width:200px;
     height: 420px;
     padding-left: 50px;
     padding-bottom: 35px;
 }
-.list_item > a > img{
+.list_item > a > img, .movie_img2 > img{
     width:200px;
     background-size: cover;
 }
@@ -218,6 +230,21 @@ li {
     height: 30px;
     background: #fb4357;
     margin-bottom: 3px;
+}
+.movie_img{
+    width:200px;
+    height: 420px;
+    padding-left: 30px;
+    padding-bottom: 35px;
+}
+.movie_img2{
+    width:200px;
+    height: 270px;
+    padding-left: 30px;
+    padding-bottom: 35px;
+}
+.soon{
+    background-color: #241d1e;
 }
 .item_info{
     color: #666;
@@ -338,7 +365,7 @@ li {
     font-weight: 500;
     align-items: stretch;
 }
-.list_item_1_wrrap_h:hover{
+.hovering_ef{
     background-color: rgba(0, 0, 0, 0.6);
     color: rgba(0, 0, 0, 0);
 }
@@ -348,6 +375,7 @@ li {
     position: absolute;
     top:70px;
     left:60px;
+    z-index: 1;
 }
 .list_item_1_src{
     width:170px;
@@ -382,15 +410,249 @@ li {
     padding: 15px 0px 10px 0px;
     text-align: center;
 }
+.movie_detail_info{
+    width: 750px;
+    margin-left: 30px;
+    border-bottom: 1px solid rgb(189, 189, 189);
+}
+.movie_detail_info2{
+    line-height: 24px;
+    font-weight: 500;
+    font-size: 14px;
+    margin-top: 15px;
+    margin-left: 35px;
+}
+.movie_detail_info2>p>span{
+    font-size: 13px;
+    margin-left: 10px;
+    color:#666;
+}
+.movie_detail_info>h1{
+    font-size: 30px;
+}
 .info{
     line-height: 0px;
     font-size: small;
     color: #666;
     text-align: center;
 }
+.movie_info_btn_group{
+    width: fit-content;
+    line-height: 40px;
+    height: 40px;
+    background-color: #ff465c;
+    margin-top: 15px;
+    margin-left: 35px;
+}
+.movie_info_btn_group> button{
+    cursor:pointer;
+    background-color: inherit;
+    border:none;
+    color: #ebebeb;
+    padding: 0px 15px 0px 15px;
+    font-size: 17px;
+    font-weight: 600;
+    border-right: 1px solid #ebebeb;
+}
+.movie_info_btn_group>button:last-child{
+    border:none;
+}
+.senario{
+    margin: 30px 10px 60px 40px;
+    font-size: 14px;
+    color:#555;
+}
+.chart_wrrap{
+    display: flex;
+    justify-content: space-between;
+    width: 880px;
+    margin-left:50px;
+    padding: 20px 30px 30px 30px;
+    border-top: 1px solid rgb(189, 189, 189);
+    border-bottom: 1px solid rgb(189, 189, 189);
+    font-weight: 600;
+    color:rgb(66, 65, 65)
+}
+.chart-container1{
+    text-align: center;
+    position: relative;
+    height: 230px;
+    width: 230px;
+}
+.chart-container2{
+    text-align: center;
+    position: relative;
+    width: 300px;
+}
+.stillcut{
+    width: 880px;
+    margin:0px auto;
+    padding: 30px 0px;
+}
+.stilcuthead{
+    font-size: 14px;
+    font-weight: 600;
+    margin-left: 20px;
+    padding: 15px 20px 15px 20px;
+    width: 100%;
+    background-color: rgb(238, 238, 238);
+}
+.stillcut_main{
+    height: 450px;
+    width: 100%;
+    border: solid 1px #ddd;
+    margin-left: 38px;
+    margin-top: 15px;
+    text-align: center;
+}
+.stillcut_img{
+    height: 450px;
+    background-size: cover;
+}
+
+.stillcut_btn_group{
+    display: flex;
+    position: absolute;
+    width: 880px;
+    top: 1400px;
+    justify-content: space-between;
+}
+.stillcut_btn_group>button{
+    cursor: pointer;
+    background-color: inherit;
+    border:none;
+}
+.stillcut_btn_group>button:hover{
+    color: #ff465c;
+}
+.movie_review{
+    width:900px;
+    margin-left: 80px;
+    height: 600px;
+}
+.review_head{
+    width:100%;
+    padding-left: 20px;
+    height: 60px;
+    line-height: 60px;
+    background-color: rgb(238,238,238);
+}
+.review_main{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    margin: 0px auto;
+    padding:10px;
+    height: 480px;
+    width:900px;
+}
+.review_paging{
+    padding-top: 30px;
+    margin:0px auto;
+    height: 60px;
+    width:600px;
+    
+}
+.review_paging>ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.review_paging>ul>li{
+    cursor: pointer;
+    width:50px;
+    text-align: center;
+}
+.review_btn{
+    cursor: pointer;
+    border-radius: 13%;
+    margin-left: 500px;
+    width: 100px;
+    height: 30px;
+    background-color: #fb4357;
+    border: 2px solid #fb4357;
+    color:#fff;
+    font-size:15px;
+    font-weight: 600;
+}
+.review_btn:hover{
+    color: #fb4357;
+    background-color: #fff;
+}
+.wwrapww{
+    width: 980px;
+    margin:0px auto;
+}
+.review_item{
+    font-size: 12px;
+    color:#666;
+    border-radius: 10%;
+    overflow: hidden;
+    border:1px solid #ddd;
+    width: 250px;
+    height: 150px;
+    margin: 6px 2px 6px 2px;
+}
+.review_item_header{
+    height: 20px;
+    background-color: #ffabb4;
+}
+.review_item_main{
+    padding: 5px;
+    height: 90px;
+}
+.review_item_footer{
+    text-align: end;
+    margin-right: 10px;
+    
+}
 #my_iframe{
 
 }
+.reservation{
+    margin:0px auto;
+    width:980px;
+    height: 600px;
+
+}
+.selecte_item_wrrap{
+    display: flex;
+}
+.selected_item_bar_wrrap{
+    height: 150px;
+    background-color: #333;
+}
+.reservation_head{
+    height:60px;
+}
 .App{
 
+}
+.select_item{
+    border:1px solid #ccc;
+    width: 250px;
+    height: 500px;
+    background-color: rgba(252, 225, 225, 0.6);
+}
+.selecte_item_wrrap>.select_item:nth-child(3){
+    width:120px;
+}
+.select_item:last-child{
+    flex-grow: 1;
+}
+.placehold{
+    padding: 30px;
+    font-size: 45px;
+    font-weight: 700;
+    color: rgb(129, 129, 129);
+
+}
+.select_title{
+    background-color: #333;
+    text-align: center;
+    color: #fff;
+    font-weight: 600;
+    height: 38px;
+    line-height: 38px;
 }
