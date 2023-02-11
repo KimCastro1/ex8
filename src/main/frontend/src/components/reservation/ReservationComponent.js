@@ -6,9 +6,7 @@ const ReservationComponent = () =>{
     const { midx } = useParams();
 
 return (
-
                 <div>
-
                 <div className='reservation'>
                     <div className='reservation_head'>
                     </div>

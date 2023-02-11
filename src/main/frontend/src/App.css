@@ -633,7 +633,7 @@ li {
     border:1px solid #ccc;
     width: 250px;
     height: 500px;
-    background-color: rgba(252, 225, 225, 0.6);
+    background-color: rgb(255, 239, 239);
 }
 .selecte_item_wrrap>.select_item:nth-child(3){
     width:120px;
@@ -655,4 +655,63 @@ li {
     font-weight: 600;
     height: 38px;
     line-height: 38px;
+}
+.login_wrrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px auto;
+    width: 800px;
+    height: 600px;
+}
+.login{
+    display: flex;
+    flex-wrap: wrap;
+    border: #ff7b8b 2px solid;
+    width: 600px;
+    height: 400px;    
+}
+.login_content{
+    width:400px;
+    text-align: center;
+    vertical-align: middle;
+}
+.login_content >div{
+    position:relative;
+    top:80px;
+}
+.login_btn{
+    cursor: pointer;
+    border: none;
+    font-weight: 700;
+    font-size: 25px;
+    color: #eee;
+    width:280px;
+    margin:5px;
+    background-color: #faa9b3;
+}
+.login_btn:hover{
+    background-color: #fb4357;
+}
+.login_content input{
+    background-color: rgb(228, 228, 228);
+    border: none;
+    padding:15px;
+    font-size: 15px;
+    height: 5px;
+    width: 250px;
+    margin:5px;
+}
+.logobox{
+    display: flex;
+    align-items: center;
+}
+.logobox > img{
+    width:200px;
+    background-size: cover;
+    margin-bottom: 100px;
+}
+.socialLogo{
+    width:280px;
+    background-size: cover;
 }

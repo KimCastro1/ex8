@@ -8,6 +8,8 @@ import FooterComponent from './components/etc/FooterComponent';
 import NotFoundComponent from './components/etc/NotFoundComponent';
 import ReservationComponent from './components/reservation/ReservationComponent'
 import CommingSoonComponent from './components/list/CommingSoonComponent';
+import LoginComponent from './components/login/LoginComponent';
+import JoinMemberComponent from './components/login/JoinMemberComponent';
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
               <Route path="/reservation" element={<ReservationComponent/>}></Route>
               <Route path="/reservation/:midx" element={<ReservationComponent/>}></Route>
               <Route path = "/list" element = {<ListMovieComponent/>}/>
+              <Route path="/joinmember" element={<JoinMemberComponent/>}></Route>
+              <Route path = "/login" element = {<LoginComponent/>}/>
               <Route path = "/commingsoon" element = {<CommingSoonComponent/>}/>
               <Route path = "/*" element={<NotFoundComponent/>}/>
             </Routes>

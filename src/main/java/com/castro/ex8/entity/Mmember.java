@@ -3,6 +3,8 @@ package com.castro.ex8.entity;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @AllArgsConstructor
@@ -10,18 +12,19 @@ import javax.persistence.*;
 @Builder
 @Getter
 @ToString
-public class Mmember {
+
+public class Mmember extends BaseEntity {
 
     @Id
-    private String id;
-    @Column(nullable = false)
     private String email;
     @Column(nullable = false)
     private String password;
-    private String nickname;
     private boolean socialLogin;
-    @Enumerated(EnumType.STRING)
-    private Author author;
-
+    @Builder.Default
+    @ElementCollection(fetch = FetchType.LAZY)
+    private Set<Author> roleSet = new HashSet<>();
+    public void addMemberRole(Author author){
+        roleSet.add(author);
+    }
 
 }
