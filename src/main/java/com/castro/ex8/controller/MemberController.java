@@ -1,22 +1,26 @@
 package com.castro.ex8.controller;
 
-import lombok.extern.log4j.Log4j2;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.castro.ex8.service.MemberService;
+import lombok.RequiredArgsConstructor;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Map;
 
 @RestController
 @RequestMapping("/member/")
-@Log4j2
+@RequiredArgsConstructor
 public class MemberController {
 
-    @GetMapping("/login")
-    public void login(){
-        log.info("login");
-    }
-    @GetMapping("/join")
-    public void join(){
+    private MemberService service;
 
+    @PostMapping("/login")
+    public ResponseEntity login(@RequestBody Map<String, String> data){
+        return service.login(data);
+    }
+    @PostMapping("/registeration")
+    public ResponseEntity registration(@RequestBody Map<String, String> data){
+        return service.registration(data);
     }
 
 }

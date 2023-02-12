@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import Logo from '../../img/logo.png'
 import GoogleLogo from '../../img/Google.png'
 import KaKaoLogo from '../../img/Kakao.png'
+import axios from 'axios'
 
 export default function LoginComponent() {
 
@@ -14,6 +15,7 @@ export default function LoginComponent() {
     const inputPw = (e)=>{
         setPw(e.target.value);
     }
+
 
 return (
     <div className='content'>
